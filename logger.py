@@ -33,18 +33,15 @@ class Cyclogger:
         self.name = self.data.get('name', '')
         self.path = self.data.get('location', '')
         self.url = self.data.get('url', '')
-        #self.sendServer('23f9bec8-6471-4f8d-b352-986e22a38f55', 'MP_Map01_P')
-        #%LOCALAPPDATA%/Prospect/Saved/Logs/Prospect.log
         with open(self.path, "r") as file:
-            file.seek(0,2) # Go to the end of the file
+            file.seek(0,2)
             while True:
                 try:
                     line = file.readline()
                     if not line:
-                        time.sleep(0.1) # Sleep briefly
+                        time.sleep(0.1)
                         continue
                     self.parseLine(line = str(line))
-                    #print(line)
                 except Exception:
                     pass
 
