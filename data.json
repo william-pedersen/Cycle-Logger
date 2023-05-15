@@ -1,5 +1,5 @@
 {
     "name": "-",
-    "location": "C:\\Users\\willi\\AppData\\Local\\Prospect\\Saved\\Logs\\Prospect.log",
+    "location": "%LOCALAPPDATA%/Prospect/Saved/Logs/Prospect.log",
     "url": "https://discord.com/api/webhooks/"
 }
