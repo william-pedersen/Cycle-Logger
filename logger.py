@@ -49,7 +49,8 @@ class Cyclogger:
         print(f'JOIN => {ctime()}: {sid} on {smap}')
 
         self.logServer(sid = sid, smap = smap)
-        self.sendServer(sid = sid, smap = smap)
+        if self.url:
+            self.sendServer(sid = sid, smap = smap)
         if len(self.servers) > 1 and (ls := self.servers[-2:] and ls[0].sid == ls[1].sid):
             print('SAME => Joined same server as last')
 
